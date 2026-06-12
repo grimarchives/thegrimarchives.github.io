@@ -1,0 +1,11 @@
+/* IMAGE ROW */
+.hero-images {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-images img {
+    width: 100%;
+    max-width: ;
+    filter: contrast(0.95) saturate(0.9);
+}

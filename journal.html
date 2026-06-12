@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grim Archive</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #e7dfd2;
+    --text: #2b2b2b;
+    --accent: #1f1f1f;
+    --muted: #6e6a64;
+    --border: #c9c1b4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+.hero h1,
+nav .logo,
+footer h3 {
+    font-family: 'BIZ UDMincho', serif;
+}
+body {
+    font-family: 'BIZ UDMincho', serif;
+    color: var(--text);
+    line-height: 1.6;
+    letter-spacing: 1px;
+    position: relative;
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+.side-image {
+    position: fixed;
+    top: 26vh;
+    width: 92px;
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18));
+    transform: translateX(0) scale(0.85);
+    transition: opacity 180ms ease, transform 220ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.side-image.left {
+    left: 12px;
+}
+
+.side-image.right {
+    right: 12px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav .logo {
+  font-family: "BIZ UDMincho", serif;
+  font-weight: 400;
+  font-style: normal;    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+.hero h1 {
+    
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+}
+
+/* IMAGE ROW */
+.hero-images {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-images img {
+    width: 100%;
+    max-width: 120px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* MEET */
+.meet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.meet h2 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;    margin-bottom: 10px;
+}
+
+.card {
+    border: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.card img {
+    width: 80px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.features h4 {
+    margin-top: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.testimonial img {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: #1f1f1f;
+    color: #e7dfd2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h3 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer nav {
+    border: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+:root {
+    --bg: #e7dfd2;
+    --text: #2b2b2b;
+    --accent: #1f1f1f;
+    --muted: #6e6a64;
+    --border: #c9c1b4;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌫️ TEXTURE LAYERS */
+body {
+   
+    color: var(--text);
+    line-height: 1.6;
+    position: relative;
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+/* Paper texture */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Grain overlay */
+/* Grain overlay with movement */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 2;
+
+    animation: grainMove 8s steps(6) infinite;
+}
+
+/* Grain drifting animation */
+@keyframes grainMove {
+    0%   { transform: translate(0, 0); }
+    20%  { transform: translate(-10px, 5px); }
+    40%  { transform: translate(8px, -10px); }
+    60%  { transform: translate(-5px, 10px); }
+    80%  { transform: translate(10px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Optional vignette (dark edges) */
+.vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    background: radial-gradient(circle at center, transparent 60%, rgba(0,0,0,0.25));
+}
+
+/* CONTENT ABOVE TEXTURES */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav .logo {
+    font-family: "BIZ UDMincho", serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-hamburger {
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 999px;
+}
+
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 100vw);
+    height: 100vh;
+    padding: 24px;
+    background: rgba(17, 17, 17, 0.97);
+    color: #f4efe7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(102%);
+    transition: transform 220ms ease;
+    z-index: 1000;
+    box-shadow: -12px 0 28px rgba(0, 0, 0, 0.35);
+}
+
+.nav-drawer.open {
+    transform: translateX(0);
+}
+
+.nav-drawer a {
+    color: #f4efe7;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 999;
+}
+
+.nav-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.nav-open {
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+.hero h1 {
+  font-family: "BIZ UDMincho", serif;
+  font-weight: 400;
+  font-style: normal;    font-size: 48px;
+    margin-bottom: 20px; 
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+}
+
+/* IMAGE ROW */
+.hero-images {
+    display: flex;
+
+}
+
+.hero-images img {
+
+    filter: contrast(0.95) saturate(0.9);
+}
+
+/* SECTION */
+.section {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* MEET */
+.meet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.meet h2 {
+  font-family: "BIZ UDMincho", serif;
+  font-weight: 400;
+  font-style: normal;    margin-bottom: 10px;
+}
+
+.card {
+    border: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(2px);
+}
+
+.card img {
+    width: 80px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.features h4 {
+    margin-top: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.testimonial img {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: #1f1f1f;
+    color: #e7dfd2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h3 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer nav {
+    border: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.biz-udmincho-regular {
+  font-family: "BIZ UDMincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Flicker animation */
+@keyframes flicker {
+    0%   { opacity: 1; }
+    92%  { opacity: 1; }
+    94%  { opacity: 0.4; }
+    96%  { opacity: 1; }
+    97%  { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Apply flicker on hover */
+.btn:hover,
+nav a:hover {
+    animation: flicker 0.6s linear;
+}
+
+.hero h1:hover {
+    animation: textFlicker 1s infinite;
+}
+
+@keyframes textFlicker {
+    0%, 18%, 22%, 100% { opacity: 1; }
+    20% { opacity: 0.3; }
+    21% { opacity: 1; }
+}
+
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Side images -->     
+<img class="side-image left" src="imgs/lamp final.png" alt="Side image left">
+<img class="side-image right" src="imgs/peekmoth.png" alt="Side image right">
+<div class="vignette"></div>
+<div class="container">
+
+<!-- NAV -->
+<nav>
+    <a class="nav-brand" href="index.html" aria-label="GRIM ARCHIVE home">
+        <span class="logo">GRIM ARCHIVE</span>
+        <img src="imgs/grim logo.png" alt="Grim logo icon">
+    </a>
+
+    <button class="nav-hamburger" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+<aside class="nav-drawer" id="navDrawer" aria-label="Slide-out navigation menu">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="journal.html">Journal</a>
+</aside>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+    
+        <h1>SMALL TOTEMS.<br>BIG SUPPORT.</h1>
+    
+        <p>Handmade companions for heavy days. Each GRIM is here to listen, protect, and remind you you're not alone.</p>
+        <div class="buttons">
+            <button class="btn primary">ADOPT A GRIM</button>
+            <button class="btn">TAKE THE QUIZ</button>
+        </div>
+    </div>
+
+    <div class="hero-totem">
+        <img width="100%" src="imgs/totems.png">
+    </div>
+</section>
+
+<!-- MEET -->
+<section class="section meet">
+    <div>
+        <h2>MEET THE GRIM</h2>
+        <p>Each GRIM is crafted to help with the invisible weight. They won’t fix everything, but they’ll stand with you while you carry it.</p>
+    </div>
+
+    <div class="card">
+        <img src="imgs/phlegmcrop.png">
+        <div>
+            <h4>P.H.L.E.G.M</h4>
+            <p>Protective Horror Locating Exaggerated Germ Maladies</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features">
+    <div>
+        <img width="100%" src="imgs/watcherfooter.png">
+        <h4>HAND CRAFTED ENTITY</h4>
+        <p>No two GRIMs are exactly alike.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/archivefooter.png">
+        <h4>ARCHIVE NUMBERED</h4>
+        <p>Each creature is recorded and catalogued.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/fieldtestfooter.png">
+        <h4>FIELD TESTED</h4>
+        <p>Observed in the presence of anxiety, overthinking and bad decisions.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/containmentfooter.png">
+        <h4>CONTAINMENT INCLUDED</h4>
+        <p>Protective housing supplied as standard.</p>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section testimonial">
+    <div>
+        <p><em>"My GRIM sits on my desk and reminds me to breathe. It's weirdly comforting."</em></p>
+        <p>- Jess, UK</p>
+    </div>
+
+    <img border='' src="imgs/inthewild.png">
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>GRIM ARCHIVE</h3>
+    <p>Support for the strange days</p>
+    <nav>
+        <ul>
+            <li>ARCHIVE</li>
+            <li>ABOUT</li>
+            <li>FAQ</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navDrawer = document.getElementById('navDrawer');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  const openNav = () => {
+    navDrawer.classList.add('open');
+    navBackdrop.classList.add('show');
+    document.body.classList.add('nav-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeNav = () => {
+    navDrawer.classList.remove('open');
+    navBackdrop.classList.remove('show');
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navDrawer.classList.contains('open');
+    isOpen ? closeNav() : openNav();
+  });
+
+  navBackdrop?.addEventListener('click', closeNav);
+  navDrawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNav();
+  });
+
+  const sideImages = document.querySelectorAll('.side-image');
+
+  const updateSideImages = () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;
+    const wave = 1 - Math.abs(progress - 0.5) * 2;
+    const pop = Math.max(0, wave);
+
+    sideImages.forEach((img, index) => {
+      const isLeft = img.classList.contains('left');
+      const x = isLeft ? -120 + pop * 120 : 120 - pop * 120;
+      img.style.opacity = String(0.15 + pop * 0.85);
+      img.style.transform = `translateX(${x}px) scale(${1.85 + pop * 0.15}) rotate(${isLeft ? -4 : 4}deg)`;
+      img.style.top = `${26 + index * 8}vh`;
+    });
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateSideImages();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  updateSideImages();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateSideImages);
+</script>
+
+</body>
+</html>

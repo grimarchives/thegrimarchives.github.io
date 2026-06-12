@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grim Archive</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Side images -->     
+<img class="side-image left" src="imgs/lamp final.png" alt="Side image left">
+<img class="side-image right" src="imgs/peekmoth.png" alt="Side image right">
+<div class="vignette"></div>
+<div class="container">
+
+<!-- NAV -->
+<nav>
+    <a class="nav-brand" href="index.html" aria-label="GRIM ARCHIVE home">
+        <span class="logo">GRIM ARCHIVE</span>
+        <img src="imgs/grim logo.png" alt="Grim logo icon">
+    </a>
+
+    <button class="nav-hamburger" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+<aside class="nav-drawer" id="navDrawer" aria-label="Slide-out navigation menu">
+        <a href="INDEX.html">THE GRIM ARCHIVES</a>
+    <a href="ARCHIVE.html">GUARDIAN FILES</a>
+    <a href="PROCESS.html">ADOPTION PROCESS</a>
+    <a href="RECORDS.html">ARCHIVE RECORDS</a>
+        <a href="CONTACT.html">CONTACT THE ARCHIVES</a>
+            <a href="BASKET.html">PENDING RELEASE (0)</a>
+</aside>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+    
+        <h1>SMALL TOTEMS.<br>BIG SUPPORT.</h1>
+    
+        <p>Handmade companions for heavy days. Each GRIM is here to listen, protect, and remind you you're not alone.</p>
+        <div class="buttons">
+            <button class="btn primary">ADOPT A GRIM</button>
+            <button class="btn">TAKE THE QUIZ</button>
+        </div>
+    </div>
+
+    <div class="hero-totem">
+        <img width="100%" src="imgs/totems.png">
+    </div>
+</section>
+
+<!-- MEET -->
+<section class="section meet">
+    <div>
+        <h2>MEET THE GRIM</h2>
+        <p>Each GRIM is crafted to help with the invisible weight. They won’t fix everything, but they’ll stand with you while you carry it.</p>
+    </div>
+
+    <div class="card">
+        <img src="imgs/phlegmcrop.png">
+        <div>
+            <h4>P.H.L.E.G.M</h4>
+            <p>Protective Horror Locating Exaggerated Germ Maladies</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features">
+    <div>
+        <img width="100%" src="imgs/watcherfooter.png">
+        <h4>HAND CRAFTED ENTITY</h4>
+        <p>No two GRIMs are exactly alike.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/archivefooter.png">
+        <h4>ARCHIVE NUMBERED</h4>
+        <p>Each creature is recorded and catalogued.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/fieldtestfooter.png">
+        <h4>FIELD TESTED</h4>
+        <p>Observed in the presence of anxiety, overthinking and bad decisions.</p>
+    </div>
+    <div>
+                <img width="100%" src="imgs/containmentfooter.png">
+        <h4>CONTAINMENT INCLUDED</h4>
+        <p>Protective housing supplied as standard.</p>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section testimonial">
+    <div>
+        <p><em>"My GRIM sits on my desk and reminds me to breathe. It's weirdly comforting."</em></p>
+        <p>- Jess, UK</p>
+    </div>
+
+    <img border='' src="imgs/inthewild.png">
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>GRIM ARCHIVE</h3>
+    <p>Support for the strange days</p>
+    <nav>
+        <ul>
+            <li>ARCHIVE</li>
+            <li>ABOUT</li>
+            <li>FAQ</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navDrawer = document.getElementById('navDrawer');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  const openNav = () => {
+    navDrawer.classList.add('open');
+    navBackdrop.classList.add('show');
+    document.body.classList.add('nav-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeNav = () => {
+    navDrawer.classList.remove('open');
+    navBackdrop.classList.remove('show');
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navDrawer.classList.contains('open');
+    isOpen ? closeNav() : openNav();
+  });
+
+  navBackdrop?.addEventListener('click', closeNav);
+  navDrawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNav();
+  });
+
+  const sideImages = document.querySelectorAll('.side-image');
+
+  const updateSideImages = () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;
+    const wave = 1 - Math.abs(progress - 0.5) * 2;
+    const pop = Math.max(0, wave);
+
+    sideImages.forEach((img, index) => {
+      const isLeft = img.classList.contains('left');
+      const x = isLeft ? -120 + pop * 120 : 120 - pop * 120;
+      img.style.opacity = String(0.15 + pop * 0.85);
+      img.style.transform = `translateX(${x}px) scale(${1.85 + pop * 0.15}) rotate(${isLeft ? -4 : 4}deg)`;
+      img.style.top = `${26 + index * 8}vh`;
+    });
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateSideImages();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  updateSideImages();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateSideImages);
+</script>
+
+</body>
+</html>

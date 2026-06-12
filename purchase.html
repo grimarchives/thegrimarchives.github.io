@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Request Release — GRIM Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .purchase-wrap { padding: 60px 5%; max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.05); border: 1px solid rgba(0,0,0,0.06); }
+    .purchase-image { width: 100%; max-width: 420px; display:block; margin: 0 auto 20px; }
+    .purchase-title { text-align:center; font-size:20px; margin-bottom:8px; }
+    .purchase-sub { text-align:center; color:var(--muted); margin-bottom:18px; }
+    .purchase-form { display:flex; flex-direction:column; gap:10px; max-width:520px; margin: 0 auto; }
+    .purchase-form input, .purchase-form textarea { padding:10px; border:1px solid var(--border); background:transparent; color:var(--text); }
+    .purchase-actions { display:flex; gap:12px; justify-content:center; margin-top:12px; }
+    .btn.request { background:var(--accent); color:#fff; border:0; padding:12px 18px; }
+    .note { color:var(--muted); text-align:center; margin-top:16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="purchase-wrap">
+      <a href="archive.html">← Back to Archive</a>
+      <h2 class="purchase-title">Request Release</h2>
+      <p class="purchase-sub">Fill this form to request purchase details for the item below.</p>
+      <img id="purchaseImage" class="purchase-image" src="" alt="Requested item">
+      <p id="purchaseName" class="purchase-title"></p>
+
+      <form id="purchaseForm" class="purchase-form">
+        <input id="buyerName" type="text" placeholder="Your full name" required>
+        <input id="buyerEmail" type="email" placeholder="Email address" required>
+        <textarea id="buyerNote" rows="4" placeholder="Optional message / shipping notes"></textarea>
+        <div class="purchase-actions">
+          <button class="btn request" id="submitRequest" type="button">REQUEST RELEASE</button>
+          <a class="btn" href="archive.html">Cancel</a>
+        </div>
+      </form>
+
+      <p class="note">This is a placeholder flow. No payment is processed here.</p>
+    </div>
+  </div>
+
+  <script>
+    // Parse ?item= from querystring
+    const params = new URLSearchParams(location.search);
+    const item = params.get('item') || '';
+    const purchaseImage = document.getElementById('purchaseImage');
+    const purchaseName = document.getElementById('purchaseName');
+
+    if (item) {
+      purchaseName.textContent = item.replace(/[-_]/g, ' ').toUpperCase();
+      // try to show the same image path pattern used by archive modals
+      const trySrc = `imgs/polaroids/clips/${item}.png`;
+      purchaseImage.src = trySrc;
+      purchaseImage.alt = item;
+    } else {
+      purchaseName.textContent = 'Unknown item';
+      purchaseImage.style.display = 'none';
+    }
+
+    document.getElementById('submitRequest').addEventListener('click', () => {
+      const name = document.getElementById('buyerName').value.trim();
+      const email = document.getElementById('buyerEmail').value.trim();
+      if (!name || !email) return alert('Please enter name and email.');
+      // Simulate a submission
+      alert('Request submitted. We will contact you at ' + email + '. (Placeholder)');
+      // Optionally redirect back or show a thank-you page
+      location.href = 'archive.html';
+    });
+  </script>
+</body>
+</html>

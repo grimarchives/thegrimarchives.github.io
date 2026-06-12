@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grim Archive</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating eyestamp -->
+    <img class="eyestamp" src="imgs/badgestamp.png" alt="Eyestamp decorative image">
+    <!-- Side images -->     
+<img class="side-image left" src="imgs/lamp final.png" alt="Side image left">
+<img class="side-image right" src="imgs/peekmoth.png" alt="Side image right">
+<div class="vignette"></div>
+<div class="container">
+
+<!-- NAV -->
+<nav>
+    <a class="nav-brand" href="index.html" aria-label="GRIM ARCHIVE home">
+        <span class="logo">THE GRIM ARCHIVES</span>
+        <img src="imgs/grim logo.png" alt="Grim logo icon">
+    </a>
+
+    <button class="nav-hamburger" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+<aside class="nav-drawer" id="navDrawer" aria-label="Slide-out navigation menu">
+    <a href="index.html">THE GRIM ARCHIVES</a>
+    <a href="archive.html">GUARDIAN FILES</a>
+    <a href="faq.html">ADOPTION PROCESS</a>
+        <a href="contact.html">CONTACT THE ARCHIVES</a>
+    <a href="basket.html">PENDING RELEASE (0)</a>
+
+</aside>
+
+<!-- archive content -->
+<section class="section archive-wrap">
+    <div class="archive-heading">
+        <h2>ARCHIVE POLAROIDS</h2>
+        <p>Each card shows a polaroid thumbnail, with INFO for the enlarged view and ADOPT to continue to the adoption page.</p>
+    </div>
+
+    <div class="archive-grid">
+        <article class="archive-card"><img src="imgs/polaroids/check.png" alt="Polaroid check"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/check.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/cravebottom.png" alt="Polaroid crave"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/crave.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/crow.png" alt="Polaroid crow"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/crow.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/doom.png" alt="Polaroid doom"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/doom.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/fend.png" alt="Polaroid fend"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/fend.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/grim.png" alt="Polaroid grim"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/grim.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/gum.png" alt="Polaroid gum"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/gum.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/salt.png" alt="Polaroid salt"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/salt.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/watcher.png" alt="Polaroid blank"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/watcher.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/moth.png" alt="Polaroid moth"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/moth.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/phlegm.png" alt="Polaroid phlegm"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/phlegm.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/scab.png" alt="Polaroid scab"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/scab.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/shriek.png" alt="Polaroid shriek"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/shriek.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img style="filter: grayscale(0.8) brightness(0.9) contrast(0.8);" src="imgs/polaroids/snarl.png" alt="Polaroid snarl"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/snarl.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/thorn.png" alt="Polaroid thorn"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/thorn.png">ACCESS RECORD</button></div></article>
+            <article class="archive-card"><img src="imgs/polaroids/phlegm.png" alt="Polaroid phlegm"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/phlegm.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/scab.png" alt="Polaroid scab"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/scab.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/shriek.png" alt="Polaroid shriek"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/shriek.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img style="filter: grayscale(0.8) brightness(0.9) contrast(0.8);" src="imgs/polaroids/snarl.png" alt="Polaroid snarl"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/snarl.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/thorn.png" alt="Polaroid thorn"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/thorn.png">ACCESS RECORD</button></div></article>
+            <article class="archive-card"><img src="imgs/polaroids/phlegm.png" alt="Polaroid phlegm"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/phlegm.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/scab.png" alt="Polaroid scab"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/scab.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/shriek.png" alt="Polaroid shriek"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/shriek.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img style="filter: grayscale(0.8) brightness(0.9) contrast(0.8);" src="imgs/polaroids/snarl.png" alt="Polaroid snarl"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/snarl.png">ACCESS RECORD</button></div></article>
+        <article class="archive-card"><img src="imgs/polaroids/thorn.png" alt="Polaroid thorn"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/thorn.png">ACCESS RECORD</button></div></article>
+        
+        <article class="archive-card"><img src="imgs/polaroids/watcher.png" alt="Polaroid watcher"><div class="archive-actions"><button type="button" class="btn primary info-trigger" data-image="imgs/polaroids/clips/watcher.png">ACCESS RECORD</button></div></article>
+    </div>
+</section>
+
+<div class="info-modal" id="infoModal" aria-hidden="true">
+    <div class="info-modal-box">
+        <a id="requestRelease" class="request-release" href="purchase.html">REQUEST RELEASE</a>
+        <img id="infoModalImage" src="" alt="Archive detail image">
+        <div class="info-modal-toolbar">
+            <button class="info-modal-button" id="infoPrev" type="button" aria-label="Previous record">PREVIOUS RECORD</button>
+            <button class="info-modal-close" id="infoModalClose" type="button">CLOSE</button>
+            <button class="info-modal-button" id="infoNext" type="button" aria-label="Next record">NEXT RECORD</button>
+            <button class="info-modal-button" id="infoZoomOut" type="button" aria-label="Zoom out">-</button>
+            <button class="info-modal-button" id="infoZoomReset" type="button" aria-label="Reset zoom">Reset</button>
+            <button class="info-modal-button" id="infoZoomIn" type="button" aria-label="Zoom in">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>GRIM ARCHIVE</h3>
+    <p>Support for the strange days</p>
+    <nav>
+        <ul>
+            <li>ARCHIVE</li>
+            <li>ABOUT</li>
+            <li>FAQ</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navDrawer = document.getElementById('navDrawer');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  const openNav = () => {
+    navDrawer.classList.add('open');
+    navBackdrop.classList.add('show');
+    document.body.classList.add('nav-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeNav = () => {
+    navDrawer.classList.remove('open');
+    navBackdrop.classList.remove('show');
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navDrawer.classList.contains('open');
+    isOpen ? closeNav() : openNav();
+  });
+
+  navBackdrop?.addEventListener('click', closeNav);
+  navDrawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+
+    const infoModal = document.getElementById('infoModal');
+    const infoModalImage = document.getElementById('infoModalImage');
+    const infoModalClose = document.getElementById('infoModalClose');
+    const infoZoomIn = document.getElementById('infoZoomIn');
+    const infoZoomOut = document.getElementById('infoZoomOut');
+    const infoZoomReset = document.getElementById('infoZoomReset');
+    const infoPrev = document.getElementById('infoPrev');
+    const infoNext = document.getElementById('infoNext');
+    const requestRelease = document.getElementById('requestRelease');
+
+    const triggers = Array.from(document.querySelectorAll('.info-trigger'));
+    const images = triggers.map(t => t.dataset.image);
+    let currentIndex = -1;
+
+    let infoModalScale = 1;
+    const INFO_ZOOM_STEP = 0.2;
+    const INFO_ZOOM_MIN = 0.5;
+    const INFO_ZOOM_MAX = 3;
+
+    const setInfoScale = (scale) => {
+        infoModalScale = Math.max(INFO_ZOOM_MIN, Math.min(INFO_ZOOM_MAX, scale));
+        if (infoModalImage) {
+            infoModalImage.style.transform = `scale(${infoModalScale})`;
+        }
+    };
+
+    const resetInfoScale = () => setInfoScale(1);
+
+    const updateRequestLink = (src) => {
+        if (!requestRelease) return;
+        try {
+            const filename = src.split('/').pop().split('.').shift();
+            requestRelease.href = `purchase.html?item=${encodeURIComponent(filename)}`;
+        } catch (e) {
+            requestRelease.href = 'purchase.html';
+        }
+    };
+
+    const openInfoIndex = (index) => {
+        if (!images.length) return;
+        currentIndex = ((index % images.length) + images.length) % images.length;
+        const src = images[currentIndex];
+        infoModalImage.src = src;
+        resetInfoScale();
+        infoModal.classList.add('open');
+        infoModal.setAttribute('aria-hidden', 'false');
+        updateRequestLink(src);
+    };
+
+    const closeInfo = () => {
+        infoModal.classList.remove('open');
+        infoModal.setAttribute('aria-hidden', 'true');
+        infoModalImage.removeAttribute('src');
+        resetInfoScale();
+        currentIndex = -1;
+    };
+
+    triggers.forEach((button, idx) => {
+        button.addEventListener('click', () => openInfoIndex(idx));
+    });
+
+    infoModal?.addEventListener('click', (event) => {
+        if (event.target === infoModal) closeInfo();
+    });
+
+    infoModalClose?.addEventListener('click', closeInfo);
+    infoZoomIn?.addEventListener('click', () => setInfoScale(infoModalScale + INFO_ZOOM_STEP));
+    infoZoomOut?.addEventListener('click', () => setInfoScale(infoModalScale - INFO_ZOOM_STEP));
+    infoZoomReset?.addEventListener('click', resetInfoScale);
+
+    infoPrev?.addEventListener('click', () => openInfoIndex(currentIndex - 1));
+    infoNext?.addEventListener('click', () => openInfoIndex(currentIndex + 1));
+
+    infoModalImage?.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        const delta = event.deltaY < 0 ? INFO_ZOOM_STEP : -INFO_ZOOM_STEP;
+        setInfoScale(infoModalScale + delta);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeNav();
+            closeInfo();
+        }
+        if (infoModal.classList.contains('open')) {
+            if (event.key === 'ArrowLeft') openInfoIndex(currentIndex - 1);
+            if (event.key === 'ArrowRight') openInfoIndex(currentIndex + 1);
+        }
+    });
+
+  
+
+  const sideImages = document.querySelectorAll('.side-image');
+
+  const updateSideImages = () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = maxScroll > 0 ? Math.min(1, window.scrollY / maxScroll) : 0;
+    const wave = 1 - Math.abs(progress - 0.5) * 2;
+    const pop = Math.max(0, wave);
+
+    sideImages.forEach((img, index) => {
+      const isLeft = img.classList.contains('left');
+      const x = isLeft ? -120 + pop * 120 : 120 - pop * 120;
+      img.style.opacity = String(0.15 + pop * 0.85);
+      img.style.transform = `translateX(${x}px) scale(${1.85 + pop * 0.15}) rotate(${isLeft ? -4 : 4}deg)`;
+      img.style.top = `${26 + index * 8}vh`;
+    });
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateSideImages();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  updateSideImages();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateSideImages);
+</script>
+
+</body>
+</html>
